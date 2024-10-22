@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    background-image: url(../assets/carrinho.jpg);
+    background-size: cover;
+    color: #fff;
+    justify-content: center;
+}
+footer{
+    background-color: chocolate;
+    text-align: left;
+    margin-top: 15%;
+    margin-right: 20%;
+    align-items: center;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+button {
+    background-color: chocolate;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div style="display: block; background-color: #eee;" id="informacoes"></div>
+
+    <section
+    style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 50px 0 50px; gap: 1rem">
+        <div>
+            <h1 style="color: aliceblue;">Cadastro</h1>
+        </div>
+    <div>
+        <input type="text" id="name" placeholder="Nome">
+    </div>
+    <div>
+        <input type="text" id="email" placeholder="Email">
+    </div>
+    <div>
+        <input type="text" id="password" placeholder="Senha">
+    </div>
+
+    <div>
+        <button onclick="cadastrar(event)">Cadastrar</button>
+    </div>
+        <br>
+    <div class="Login">
+        <div>
+            <h1 style="color: aliceblue;">Login</h1>
+        </div>
+        <div>
+            <input type="text" id="email_login" placeholder="Email">
+            <input type="text" id="password_login" placeholder="Senha">
+            <button onclick="logar(event)">Logar</button>
+            <button onclick="logout(event)">Sair</button>
+        </div>
+    </div>
+
+    <div>
+        <h1 style="color: aliceblue;">Catálogo</h1>
+        <div>
+            <input type="text" id="name_pro" placeholder="Nome do Produto">
+            <input type="text" id="price_pro" placeholder="Preço do Produto">
+            <button onclick="logar(event)">Escolher Arquivo</button>
+            <!-- <p>Nenhum arquivo escolhido</p> -->
+            <button onclick="logout(event)">Inserir</button>
+        </div>
+    </div>
+
+
+<div class="Catálogo">
+    <section>
+    <div class="Catálogo">
+        <div class="container">
+          <div class="column"><div class="card" id="1">
+            <img src="../assets/lapis.jpg">
+            <div>
+                <h1>Lápis Poderoso</h1>
+                <h2>Traz vida aos desenhos</h2>
+                <span>R$9,99</span>
+                <button id="editar_produto" onclick="formEditarProduto()">Editar</button>
+            </div>
+        </div></div>
+       
+          <div class="column"><div class="card" id="2">
+            <img src="../assets/portal.jpg">
+            <div>
+                <h1>Portal Futuro</h1>
+                <h2>Nunca foi testado antes...</h2>
+                <span>R$149,99</span>
+                <button id="editar_produto"  onclick="formEditarProduto()">Editar</button>
+            </div>
+        </div></div>
+       
+          <div class="column"><div class="card" id="3">
+            <img src="../assets/vassoura.jpg">
+            <div>
+                <h1>Vassoura Voadora</h1>
+                <h2>Igual vassoura de bruxa</h2>
+                <span>R$99,99</span>
+                <button id="editar_produto"  onclick="formEditarProduto()">Editar</button>
+            </div>
+        </div></div>
+    </section>
+    <br><br>
+    <section>
+        <div class="Catálogo">
+            <div class="container">
+              <div class="column"><div class="card" id="4">
+                <img src="../assets/cartola.jpg">
+                <div>
+                    <h1>Cartola de Oz</h1>
+                    <h2>Toda a magia de Oz na sua mão</h2>
+                    <span>R$22,17</span>
+                    <button id="editar_produto"  onclick="formEditarProduto()">Editar</button>
+                </div>
+            </div></div>
+           
+        <div class="column"><div class="card" id="5">
+                <img src="../assets/poçao.jpg">
+            <div>
+                <h1>Poção da Ivisibilidade</h1>
+                <h2>Use ela para o bem!</h2>
+                <span>R$329,99</span>
+                <button id="editar_produto"  onclick="formEditarProduto()">Editar</button>
+            </div>
+        </div></div>
+           
+              <div class="column"><div class="card" id="6">
+                <img src="../assets/tapete.jpg">
+                <div>
+                    <h1>Tapete do Aladin</h1>
+                    <h2>Não vem com uma lâpada mágica inclusa!</h2>
+                    <span>R$59,99</span>
+                    <button id="editar_produto" onclick="formEditarProduto()">Editar</button>
+                </div>
+            </div></div>
+        </section>
+
+    <section>
+      </div>
+      <div class="Catálogo">
+        <div class="container">
+        <div class="column"><div class="card" id="7">
+            <img src="../assets/jordan.jpg">
+        <div>
+            <h1>Tênis Jordan</h1>
+            <h2>Ande pelo ar com esse par mágico</h2>
+            <span>R$249,99</span>
+            <button id="editar_produto" onclick="formEditarProduto()">Editar</button>
+        </div>
+        </div></div>
+       
+        <div class="column"><div class="card" id="8">
+            <img src="../assets/bola.jpg">
+        <div>
+            <h1>Bola Mágica</h1>
+            <h2>Se torne o craque da sua rua</h2>
+            <span>R$19,99</span>
+            <button id="editar_produto" onclick="formEditarProduto()">Editar</button>
+        </div>
+        </div></div>
+       
+        <div class="column"><div class="card" id="9">
+            <img src="../assets/espada.jpg">
+            <div>
+                <h1 id="titulo-produto">Scalibur</h1>
+                <h2>A espada mais épica de todas</h2>
+                <span>R$80,49</span>
+                <button id="editar_produto" onclick="formEditarProduto()">Editar</button>
+            </div>
+        </div></div>
+    </section>
+    <br><br>
+
+    <div style ="
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow : auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.4);" id = "editar_produto">
+    <div style="background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;"">
+        <!-- MODAL -->
+        <h2>Editar Produto</h2>
+        <input type="hidden" id="id_produto" value=""><br>
+        <input type="text" id="editar_titulo" value=""><br>
+        <input type="text" id="editar_preco" value=""><br>
+        <img src="" alt="" id="imagem_produto" width="50px" height="50px">
+        <input type="file" id="editar_imagem"><br>
+        <button onclick="AtualizarProduto(event)">Atualizar</button>
+    </div></div>
+
+<script src="login.js"></script>
+</body>
+</html>
